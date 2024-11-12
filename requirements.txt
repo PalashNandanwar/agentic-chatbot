@@ -1,0 +1,16 @@
+pip                     24.3.1
+requests                2.32.3
+python-dotenv           1.0.1
+streamlit               1.40.0
+openai                  1.54.3
+wikipedia-api           0.7.1
+transformers            4.46.2
+sentence-transformers   3.2.1
+faiss-cpu               1.9.0
+spacy                   3.8.2
+spacy-legacy            3.0.12
+spacy-loggers           1.0.5
+pdfminer.six            20240706
+PyPDF2                  3.0.1
+pdfplumber              0.11.4 
+pypdfium2               4.30.0
