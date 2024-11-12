@@ -32,6 +32,8 @@ if option == "Wikipedia Search":
     # Autocomplete function using Wikipedia search results
     def autocomplete(query):
         try:
+            summary = get_wikipedia_summary(query)
+            st.write(summary)
             # Get Wikipedia suggestions based on the query
             suggestions = wikipedia.search(query, results=5)
             return suggestions
@@ -55,7 +57,8 @@ if option == "Wikipedia Search":
                     st.write(summary)
                     break
         else:
-            st.write("No suggestions found for this query.")
+            summary = get_wikipedia_summary(query)
+            st.write(summary)
 
         # Display the summary for the corrected query
         if not suggestions:
