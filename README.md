@@ -1,4 +1,4 @@
-# Project Name: Intelligent Personal Assistant
+# Agentic Chatbot: Intelligent Personal Assistant
 
 ## Overview
 **Intelligent Personal Assistant** is a powerful tool designed to enhance productivity by providing seamless access to Wikipedia articles, comprehensive web searches, and personalized CV report generation. This project leverages APIs and automation tools to simplify data retrieval, offering users a streamlined experience for obtaining relevant information and creating customized reports.
