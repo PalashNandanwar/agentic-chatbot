@@ -3,6 +3,7 @@ import wikipedia  # Wikipedia API
 from textblob import TextBlob  # For spelling correction
 from utils.web_search import search_web, identify_query_type, format_results
 from utils.wikipedia_scraper import get_wikipedia_summary
+from utils.cv_RUn import extract_text_from_pdf, generate_career_insights
 
 # Initialize chat history if it doesn't exist
 if "chat_history" not in st.session_state:
@@ -12,7 +13,7 @@ if "chat_history" not in st.session_state:
 st.sidebar.title("Navigation")
 st.markdown("")
 
-option = st.sidebar.radio("Select Query Type", ("Wikipedia Search", "Web Scraper"))
+option = st.sidebar.radio("Select Query Type", ("Wikipedia Search", "Web Scraper", "Resume Insights"))
 
 # Main chat interface
 st.title("Agentic-chatbot")
@@ -78,3 +79,16 @@ elif option == "Web Scraper":
             st.write(formatted_results)
         except Exception as e:
             st.error(f"Error: {str(e)}")
+
+elif option == "Resume Insights":
+    st.subheader("Upload Your Resume")
+
+    resume_file = st.file_uploader("Choose a PDF resume file:", type="pdf")
+
+    if resume_file is not None:
+        resume_text = extract_text_from_pdf(resume_file)
+        insights = generate_career_insights(resume_text)
+
+        st.markdown("### Career Insights")
+        st.markdown(insights)
+
