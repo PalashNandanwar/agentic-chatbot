@@ -16,9 +16,12 @@
 - **Beautiful Soup / Scrapy**: For parsing and extracting data from web pages (in case of web scraping).
 - **OpenAI API (Optional)**: To enhance natural language responses or summaries.
 
+Video Link - https://drive.google.com/file/d/1a_3N5y-uKYUTUu_WXxi3WL8zDmlpfjnP/view?usp=sharing
+
 ## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/intelligent-assistant.git
    cd app
+
    
